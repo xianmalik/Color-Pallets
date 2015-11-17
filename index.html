@@ -5,20 +5,32 @@
 
     <title>Color Pallets</title>
 
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700' rel='stylesheet' type='text/css'>
     <style media="screen">
         td {
-            font-family: 'Open Sans', sans-serif;
+            font-family: 'Raleway', sans-serif;
             color : #f2f2f2;
             padding: 10px 20px;
             border-radius: 5px ;
+            text-align: center;
+            width: 100px;
+        }
+        td.dark {
+            color: #222;
         }
     </style>
 </head>
 <body>
     <table>
         <tr>
-            <td>#333</td>
+            <td>#05668d</td>
+            <td>#028090</td>
+            <td>#00a896</td>
+            <td>#02c39a</td>
+            <td class="dark">#f0f3bd</td>
+        </tr>
+        <tr>
+            <td>#ff1654</td>
         </tr>
     </table>
 
@@ -26,7 +38,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script>
         $(document).ready(function(){
-            $('td').css("background-color" , $('td').html());
+            $('td').each(function(){
+                $(this).css("background-color" , $(this).html());
+            });
         });
     </script>
 </body>
